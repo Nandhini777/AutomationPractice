@@ -1,1 +1,1 @@
-# ecomm-ghana-web-automation
+# AutomationPractice

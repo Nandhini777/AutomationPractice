@@ -1,0 +1,74 @@
+#Author : Nandhini
+Feature: To Check the Automation Practise
+
+  @Regression @Automation
+  Scenario Outline: Login                  [90m# 01_Tomato.feature:5[0m
+    [36mGiven [0m[36mlaunch the website[0m
+    [36mGiven [0m[36mNavigate to create an account[0m
+    [36mGiven [0m[36menter "<Email>" and "<Password>"[0m
+    [36mThen [0m[36muser logout[0m
+
+    Examples: 
+
+  @Automation @Regression
+  Scenario Outline: Login                                      [90m# 01_Tomato.feature:13[0m
+    [32mGiven [0m[32mlaunch the website[0m                                   [90m# LoginSteps.customerWebsiteLaunch()[0m
+    [32mGiven [0m[32mNavigate to create an account[0m                        [90m# LoginSteps.create_an_account()[0m
+    [31mGiven [0m[31menter "[0m[31m[1mtestautomation@mailinator.com[0m[31m" and "[0m[31m[1mtest@123[0m[31m"[0m [90m# LoginSteps.enter(String,String)[0m
+      [31morg.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"email"}
+        (Session info: chrome=88.0.4324.150)
+        (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)
+      Command duration or timeout: 0 milliseconds
+      For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+      Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+      System info: host: 'INCHN-LAP1234', ip: '192.168.1.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_172'
+      Driver info: org.openqa.selenium.chrome.ChromeDriver
+      Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\nandhini.r\AppData...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 88.0.4324.150, webStorageEnabled: true}
+      Session ID: 6b24d0e4a8c70e8d0d147491a0233341
+      *** Element info: {Using=id, value=email}
+      	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+      	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+      	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+      	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+      	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+      	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+      	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+      	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+      	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+      	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+      	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+      	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)
+      	at org.openqa.selenium.By$ById.findElement(By.java:188)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+      	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+      	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+      	at com.sun.proxy.$Proxy19.getWrappedElement(Unknown Source)
+      	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:50)
+      	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+      	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Unknown Source)
+      	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+      	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+      	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+      	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+      	at java.util.stream.ReferencePipeline.collect(Unknown Source)
+      	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:480)
+      	at com.eComm.Utils.CommonActions.scrollToMakeElementVisible(CommonActions.java:171)
+      	at com.eComm.PageFunctions.LoginPageFunction.login(LoginPageFunction.java:31)
+      	at com.eComm.StepDefinitions.LoginSteps.enter(LoginSteps.java:21)
+      	at ✽.Given enter "testautomation@mailinator.com" and "test@123"(01_Tomato.feature:8)
+      [0m
+    [36mThen [0m[36muser logout[0m                                           [90m# LoginSteps.userlogout()[0m
+
+  @Automation
+  Scenario Outline: Login                  [90m# 01_Tomato.feature:17[0m
+    [36mGiven [0m[36mlaunch the website[0m
+    [36mGiven [0m[36mSelect the category "<Category>"[0m
+
+    Examples: 
+
+  @Automation
+  Scenario Outline: Login               [90m# 01_Tomato.feature:23[0m
+    [32mGiven [0m[32mlaunch the website[0m            [90m# LoginSteps.customerWebsiteLaunch()[0m
+    [33mGiven [0m[33mSelect the category "Dresses"[0m
